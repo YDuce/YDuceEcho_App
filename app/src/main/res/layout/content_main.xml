@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <!--    Text to be echoed-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tel_input_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/padding_standard"
+        android:hint="@string/please_type_text_here">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiet_input_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Echoed Text -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcv_output_text"
+        style="@style/Widget.Material3.CardView.Outlined"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/padding_standard"
+        android:layout_marginTop="@dimen/standard_margin">
+
+        <TextView
+            android:id="@+id/tv_output_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/padding_standard"
+            android:text="@string/initial_text" />
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>
